@@ -246,10 +246,6 @@ namespace EmployeeManagement
             this.Close();
         }
 
-        private void btnReload_Click(object sender, EventArgs e)
-        {
-            loadEmployee();
-        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -389,7 +385,14 @@ namespace EmployeeManagement
             f.Show();
         }
 
-        private void btn_search_Click(object sender, EventArgs e)
+
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            loadEmployee();
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
         {
             string strId = tb_empSearchId.Text.ToString();
             if (strId != "")
@@ -411,7 +414,7 @@ namespace EmployeeManagement
                     }
                 }
                 else
-                MessageBox.Show("Input must be only number!", "Warning Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Input must be only number!", "Warning Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 
             }

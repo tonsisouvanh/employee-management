@@ -16,6 +16,8 @@ namespace EmployeeManagement
         {
             InitializeComponent();
         }
+        private String username = "admin";
+        private String password = "admin";
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -24,9 +26,9 @@ namespace EmployeeManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(tb_username.Text != "" || tb_password.Text != "")
+            if (tb_username.Text != "" || tb_password.Text != "")
             {
-                if(tb_username.Text == "admin" && tb_password.Text == "admin")
+                if (tb_username.Text == username && tb_password.Text == password)
                 {
                     this.Hide();
                     Menu f = new Menu();
