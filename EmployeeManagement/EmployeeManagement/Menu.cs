@@ -43,7 +43,7 @@ namespace EmployeeManagement
         }
 
 
-        private void LogoutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             var confirmResult = MessageBox.Show("Are you sure to logout?",
                                     "Confirm Logout!!",
