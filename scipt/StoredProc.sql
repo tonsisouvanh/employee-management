@@ -305,6 +305,43 @@ begin
 end
 go
 
+-- ======================= HOLIDAY ======================= 
+--ADD
+
+if(OBJECT_ID('sp_AddSalary') is not null)
+	drop proc sp_AddSalary
+go
+create procedure sp_AddSalary
+	@createdDate date, @empId int, @salary int, @salaryDeduction int
+as
+begin
+	Declare @toPay int;
+
+	if(@salaryDeduction > 0 and @salary > 0)
+	begin
+		set @toPay = @salary - @salaryDeduction
+	end
+	else
+	begin
+		set @toPay = @salary
+	end
+	
+	INSERT INTO SALARY(createdDate, empId,salary, salaryDeduction, salaryToPay)
+	VALUES(@createdDate, @empId, @salary, @salaryDeduction,@toPay)
+end
+GO
+
+exec sp_AddSalary '2002-01-01', 5,2000000,0
+go
+
+exec sp_AddSalary '2002-02-01', 5,2000000,500000
+go
+
+select * from SALARY
+
+
+
+
 -- ============== trigger ===================
 if(OBJECT_ID('trg_Employee') is not null)
 	drop trigger trg_Employee
@@ -348,7 +385,6 @@ Begin
 End
 go
 
-
 -- ============= VIEW ================
 if(OBJECT_ID('view_Employee') is not null)
 	drop view view_Employee
@@ -363,4 +399,18 @@ AS
 	INNER JOIN BENEFIT benef
 	ON emp.benefitID = benef.benefitID
 GO
+
+
+if(OBJECT_ID('view_EmployeeReport') is not null)
+	drop view view_EmployeeReport
+go
+CREATE VIEW view_EmployeeReport 
+AS
+	select e.empID,e.fullName,e.birthDay,e.address,e.identityCard,e.phone,e.sex,p.positionName, d.deptName, b.benefitName from EMPLOYEE e
+	inner join POSITION p on e.positionID = p.positionID
+	inner join DEPARTMENT d on e.deptID = d.deptID
+	inner join BENEFIT b on e.benefitID = b.benefitID
+GO
+
+select * from view_EmployeeReport
 

@@ -199,6 +199,7 @@
             this.empReportToolStripMenuItem.Name = "empReportToolStripMenuItem";
             this.empReportToolStripMenuItem.Size = new System.Drawing.Size(326, 30);
             this.empReportToolStripMenuItem.Text = "ລາຍງານຂໍ້ມູນພະນັກງານ";
+            this.empReportToolStripMenuItem.Click += new System.EventHandler(this.empReportToolStripMenuItem_Click);
             // 
             // timeoffReportToolStripMenuItem
             // 

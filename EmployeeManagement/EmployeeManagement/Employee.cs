@@ -155,23 +155,30 @@ namespace EmployeeManagement
         void loadEmployee()
         {
             SetBtEdit_Off();
+            try
+            {
+                DataTable dtEmp = DataProvider.Instance.ExecuteQuery("Select * from view_Employee");
+                dtgv_emp.DataSource = dtEmp;
 
-            DataTable dtEmp = DataProvider.Instance.ExecuteQuery("Select * from view_Employee");
-            dtgv_emp.DataSource = dtEmp;
-
-            dtgv_emp.Columns["empID"].HeaderText = "ລະຫັດ";
-            dtgv_emp.Columns["fullName"].HeaderText = "ພະນັກງານ";
-            dtgv_emp.Columns["birthDay"].HeaderText = "ວັນເກີດ";
-            dtgv_emp.Columns["address"].HeaderText = "ທີ່ຢູ່";
-            dtgv_emp.Columns["identityCard"].HeaderText = "ເລກບັດປະຊາຊົນ";
-            dtgv_emp.Columns["phone"].HeaderText = "ເບີໂທ";
-            dtgv_emp.Columns["sex"].HeaderText = "ເພດ";
-            dtgv_emp.Columns["positionID"].Visible = false;
-            dtgv_emp.Columns["deptID"].Visible = false;
-            dtgv_emp.Columns["benefitID"].Visible = false;
-            dtgv_emp.Columns["positionName"].HeaderText = "ຕຳແໜ່ງ";
-            dtgv_emp.Columns["deptName"].HeaderText = "ພະແນກ";
-            dtgv_emp.Columns["benefitName"].HeaderText = "ສະວັດດີການ";
+                dtgv_emp.Columns["empID"].HeaderText = "ລະຫັດ";
+                dtgv_emp.Columns["fullName"].HeaderText = "ພະນັກງານ";
+                dtgv_emp.Columns["birthDay"].HeaderText = "ວັນເກີດ";
+                dtgv_emp.Columns["address"].HeaderText = "ທີ່ຢູ່";
+                dtgv_emp.Columns["identityCard"].HeaderText = "ເລກບັດປະຊາຊົນ";
+                dtgv_emp.Columns["phone"].HeaderText = "ເບີໂທ";
+                dtgv_emp.Columns["sex"].HeaderText = "ເພດ";
+                dtgv_emp.Columns["positionID"].Visible = false;
+                dtgv_emp.Columns["deptID"].Visible = false;
+                dtgv_emp.Columns["benefitID"].Visible = false;
+                dtgv_emp.Columns["positionName"].HeaderText = "ຕຳແໜ່ງ";
+                dtgv_emp.Columns["deptName"].HeaderText = "ພະແນກ";
+                dtgv_emp.Columns["benefitName"].HeaderText = "ສະວັດດີການ";
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Can not connect to database");
+            }
+          
 
         }
 

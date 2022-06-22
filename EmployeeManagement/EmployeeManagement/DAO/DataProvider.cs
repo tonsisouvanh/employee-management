@@ -66,8 +66,9 @@ namespace EmployeeManagement.DAO
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
-            }
+                //Console.WriteLine(e.ToString());
+                MessageBox.Show("Fail to connect to database!");
+             }
 
             return data;
         }

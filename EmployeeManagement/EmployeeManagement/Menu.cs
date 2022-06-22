@@ -91,5 +91,11 @@ namespace EmployeeManagement
             Holiday f = new Holiday();
             f.ShowDialog();
         }
+
+        private void empReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmpReport f = new EmpReport();
+            f.ShowDialog();
+        }
     }
 }

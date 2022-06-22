@@ -84,8 +84,24 @@ CREATE TABLE EMPLOYEE
    positionID int,
    deptID int,
    benefitID int,
+   empRank nvarchar(125),
    primary key (empID)
 )
+
+
+if(OBJECT_ID('SALARY') is not null)
+	drop table SALARY
+go
+CREATE TABLE SALARY
+(
+   createdDate date not null,
+   empId int not null, --fk
+   salary int default 0,
+   salaryDeduction int default 0,
+   salaryToPay int,
+   primary key (createdDate,empId)
+)
+
 
 alter table HOLIDAY 
 add constraint FK_HOLIDAY_EMPLOYEE
@@ -112,7 +128,10 @@ add constraint FK_EMPLOYEE_BENEFIT
 foreign key (benefitID) references BENEFIT(benefitID)
 ON DELETE CASCADE;
 
-
+alter table SALARY 
+add constraint FK_SALARY_EMPLOYEE
+foreign key (empId) references EMPLOYEE(empID)
+ON DELETE CASCADE;
 
 /***************************************** INSERT DATA **********************************************************/
 -- POSITION
