@@ -177,6 +177,7 @@
             this.salaryPaymentsToolStripMenuItem.Name = "salaryPaymentsToolStripMenuItem";
             this.salaryPaymentsToolStripMenuItem.Size = new System.Drawing.Size(208, 30);
             this.salaryPaymentsToolStripMenuItem.Text = "ເບີກຈ່າຍເງິນເດືອນ";
+            this.salaryPaymentsToolStripMenuItem.Click += new System.EventHandler(this.salaryPaymentsToolStripMenuItem_Click);
             // 
             // reportToolStripMenuItem
             // 
@@ -263,6 +264,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));

@@ -32,11 +32,12 @@ namespace EmployeeManagement
 
         void loadEmployee()
         {
-            //SetBtEdit_Off();
             try
             {
                 DataTable dtEmp = DataProvider.Instance.ExecuteQuery("Select * from view_EmployeeReport");
                 dtgv_emp.DataSource = dtEmp;
+
+                dtgv_emp.Columns["birthDay"].DefaultCellStyle.Format = "dd/MM/yyyy";
 
                 dtgv_emp.Columns["empId"].HeaderText = "ລະຫັດພະນັກງານ";
                 dtgv_emp.Columns["fullName"].HeaderText = "ພະນັກງານ";
@@ -66,11 +67,6 @@ namespace EmployeeManagement
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void dtgv_emp_DoubleClick(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -113,6 +109,12 @@ namespace EmployeeManagement
             {
                 MessageBox.Show("Please enter id");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Salary f = new Salary();
+            f.ShowDialog();
         }
     }
 }

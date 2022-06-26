@@ -97,5 +97,11 @@ namespace EmployeeManagement
             EmpReport f = new EmpReport();
             f.ShowDialog();
         }
+
+        private void salaryPaymentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Salary f = new Salary();
+            f.ShowDialog();
+        }
     }
 }

@@ -160,6 +160,9 @@ namespace EmployeeManagement
                 DataTable dtEmp = DataProvider.Instance.ExecuteQuery("Select * from view_Employee");
                 dtgv_emp.DataSource = dtEmp;
 
+                dtgv_emp.Columns["birthDay"].DefaultCellStyle.Format = "dd/MM/yyyy";
+
+
                 dtgv_emp.Columns["empID"].HeaderText = "ລະຫັດ";
                 dtgv_emp.Columns["fullName"].HeaderText = "ພະນັກງານ";
                 dtgv_emp.Columns["birthDay"].HeaderText = "ວັນເກີດ";

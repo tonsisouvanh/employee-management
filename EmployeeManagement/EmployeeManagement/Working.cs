@@ -102,6 +102,8 @@ namespace EmployeeManagement
                                                                         + "where WORK_TIME.empID = EMPLOYEE.empID");
             dtgv_working.DataSource = dtWorking;
 
+            dtgv_working.Columns["createdDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
+
             dtgv_working.Columns["workTimeID"].HeaderText = "ລະຫັດ";
             dtgv_working.Columns["startWorkAt"].HeaderText = "ເວລາເຂົ້າວຽກ";
             dtgv_working.Columns["stopWorkAt"].HeaderText = "ເວລາອອກວຽກ";

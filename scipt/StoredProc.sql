@@ -305,9 +305,9 @@ begin
 end
 go
 
--- ======================= HOLIDAY ======================= 
---ADD
+-- ======================= SALARY ======================= 
 
+--ADD
 if(OBJECT_ID('sp_AddSalary') is not null)
 	drop proc sp_AddSalary
 go
@@ -341,6 +341,55 @@ select * from SALARY
 
 
 
+--DELETE
+if(OBJECT_ID('sp_DeleteSalary') is not null)
+	drop proc sp_DeleteSalary
+go
+create procedure sp_DeleteSalary
+	@empId int,@createdDate date
+as
+begin
+	if exists (select * from SALARY where empId = @empId and createdDate = @createdDate)
+	begin
+		delete SALARY where empId = @empId and createdDate = @createdDate;
+	end
+end
+GO
+
+exec sp_DeleteSalary 4,'2022-07-24'
+go
+
+select * from SALARY
+
+
+--UPDATE
+if(OBJECT_ID('sp_UpdateSalary') is not null)
+	drop proc sp_UpdateSalary
+go
+create procedure sp_UpdateSalary
+	@createdDate date, @empId int, @salary int, @salaryDeduction int
+as
+begin
+	Declare @toPay int;
+
+	if(@salaryDeduction > 0 and @salary > 0)
+	begin
+		set @toPay = @salary - @salaryDeduction
+	end
+	else
+	begin
+		set @toPay = @salary
+	end
+
+	UPDATE SALARY set salary = @salary, salaryDeduction = @salaryDeduction, salaryToPay = @toPay
+	where empId = @empId and createdDate = @createdDate
+end
+GO
+
+exec sp_UpdateSalary '2022-06-24',9,5000000,1500000
+go
+
+select * from SALARY
 
 -- ============== trigger ===================
 if(OBJECT_ID('trg_Employee') is not null)

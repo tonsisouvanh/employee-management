@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtp_stopAt = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.dtp_startAt = new System.Windows.Forms.DateTimePicker();
@@ -42,14 +42,6 @@
             this.cb_emp = new System.Windows.Forms.ComboBox();
             this.dtpicker_createdDate = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel_form = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.dtgv_working = new System.Windows.Forms.DataGridView();
             this.tblp_btn = new System.Windows.Forms.TableLayoutPanel();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -58,13 +50,21 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_form = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.dtgv_working = new System.Windows.Forms.DataGridView();
             this.panel4.SuspendLayout();
+            this.tblp_btn.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_form.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_working)).BeginInit();
-            this.tblp_btn.SuspendLayout();
             this.SuspendLayout();
             // 
             // dtp_stopAt
@@ -173,8 +173,9 @@
             // dtpicker_createdDate
             // 
             this.dtpicker_createdDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpicker_createdDate.CustomFormat = "dd/MM/yyyy";
             this.dtpicker_createdDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpicker_createdDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpicker_createdDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpicker_createdDate.Location = new System.Drawing.Point(517, 24);
             this.dtpicker_createdDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpicker_createdDate.Name = "dtpicker_createdDate";
@@ -191,136 +192,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(716, 82);
             this.panel4.TabIndex = 20;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Phetsarath OT", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(431, 67);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 20);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "ພະນັກງານ";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Phetsarath OT", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(429, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 20);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "ວັນບັນທຶກ";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.panel_form);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(716, 737);
-            this.panel2.TabIndex = 16;
-            // 
-            // panel_form
-            // 
-            this.panel_form.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_form.Controls.Add(this.dtp_stopAt);
-            this.panel_form.Controls.Add(this.label7);
-            this.panel_form.Controls.Add(this.dtp_startAt);
-            this.panel_form.Controls.Add(this.label4);
-            this.panel_form.Controls.Add(this.tb_workHour);
-            this.panel_form.Controls.Add(this.label3);
-            this.panel_form.Controls.Add(this.tb_workId);
-            this.panel_form.Controls.Add(this.label1);
-            this.panel_form.Controls.Add(this.cb_emp);
-            this.panel_form.Controls.Add(this.dtpicker_createdDate);
-            this.panel_form.Controls.Add(this.label9);
-            this.panel_form.Controls.Add(this.label2);
-            this.panel_form.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_form.Location = new System.Drawing.Point(0, 82);
-            this.panel_form.Margin = new System.Windows.Forms.Padding(2);
-            this.panel_form.Name = "panel_form";
-            this.panel_form.Size = new System.Drawing.Size(716, 184);
-            this.panel_form.TabIndex = 19;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(716, 82);
-            this.panel1.TabIndex = 18;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Phetsarath OT", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(248, 15);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(250, 51);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "ຂໍ້ມູນການມາວຽກ";
-            // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.Controls.Add(this.dtgv_working);
-            this.panel5.Location = new System.Drawing.Point(20, 370);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
-            this.panel5.Size = new System.Drawing.Size(671, 344);
-            this.panel5.TabIndex = 16;
-            // 
-            // dtgv_working
-            // 
-            this.dtgv_working.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv_working.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgv_working.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Phetsarath OT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgv_working.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgv_working.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgv_working.Location = new System.Drawing.Point(11, 12);
-            this.dtgv_working.Margin = new System.Windows.Forms.Padding(2);
-            this.dtgv_working.Name = "dtgv_working";
-            this.dtgv_working.ReadOnly = true;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgv_working.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dtgv_working.RowTemplate.Height = 24;
-            this.dtgv_working.Size = new System.Drawing.Size(649, 320);
-            this.dtgv_working.TabIndex = 13;
-            this.dtgv_working.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_working_CellContentClick);
             // 
             // tblp_btn
             // 
@@ -459,6 +330,136 @@
             this.btnReload.UseVisualStyleBackColor = true;
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Phetsarath OT", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(431, 67);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 20);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "ພະນັກງານ";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Phetsarath OT", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(429, 24);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 20);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "ວັນບັນທຶກ";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel_form);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.panel5);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(716, 737);
+            this.panel2.TabIndex = 16;
+            // 
+            // panel_form
+            // 
+            this.panel_form.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_form.Controls.Add(this.dtp_stopAt);
+            this.panel_form.Controls.Add(this.label7);
+            this.panel_form.Controls.Add(this.dtp_startAt);
+            this.panel_form.Controls.Add(this.label4);
+            this.panel_form.Controls.Add(this.tb_workHour);
+            this.panel_form.Controls.Add(this.label3);
+            this.panel_form.Controls.Add(this.tb_workId);
+            this.panel_form.Controls.Add(this.label1);
+            this.panel_form.Controls.Add(this.cb_emp);
+            this.panel_form.Controls.Add(this.dtpicker_createdDate);
+            this.panel_form.Controls.Add(this.label9);
+            this.panel_form.Controls.Add(this.label2);
+            this.panel_form.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_form.Location = new System.Drawing.Point(0, 82);
+            this.panel_form.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_form.Name = "panel_form";
+            this.panel_form.Size = new System.Drawing.Size(716, 184);
+            this.panel_form.TabIndex = 19;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(716, 82);
+            this.panel1.TabIndex = 18;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Phetsarath OT", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(248, 15);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(250, 51);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "ຂໍ້ມູນການມາວຽກ";
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Controls.Add(this.dtgv_working);
+            this.panel5.Location = new System.Drawing.Point(20, 370);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
+            this.panel5.Size = new System.Drawing.Size(671, 344);
+            this.panel5.TabIndex = 16;
+            // 
+            // dtgv_working
+            // 
+            this.dtgv_working.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_working.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgv_working.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Phetsarath OT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv_working.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgv_working.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgv_working.Location = new System.Drawing.Point(11, 12);
+            this.dtgv_working.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgv_working.Name = "dtgv_working";
+            this.dtgv_working.ReadOnly = true;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgv_working.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgv_working.RowTemplate.Height = 24;
+            this.dtgv_working.Size = new System.Drawing.Size(649, 320);
+            this.dtgv_working.TabIndex = 13;
+            this.dtgv_working.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_working_CellContentClick);
+            // 
             // Working
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,6 +471,7 @@
             this.Text = "Working";
             this.Load += new System.EventHandler(this.Working_Load);
             this.panel4.ResumeLayout(false);
+            this.tblp_btn.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_form.ResumeLayout(false);
             this.panel_form.PerformLayout();
@@ -477,7 +479,6 @@
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_working)).EndInit();
-            this.tblp_btn.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

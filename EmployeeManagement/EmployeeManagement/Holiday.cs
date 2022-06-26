@@ -105,6 +105,11 @@ namespace EmployeeManagement
                                                                         + "where HOLIDAY.empID = EMPLOYEE.empID");
             dtgv_holiday.DataSource = dtHoliday;
 
+            dtgv_holiday.Columns["createdDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dtgv_holiday.Columns["startedDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dtgv_holiday.Columns["endDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
+
+
             dtgv_holiday.Columns["holidayID"].HeaderText = "ລະຫັດ";
             dtgv_holiday.Columns["reason"].HeaderText = "ເຫດຜົນ";
             dtgv_holiday.Columns["restDays"].HeaderText = "ຈຳນວນວັນພັກ";
